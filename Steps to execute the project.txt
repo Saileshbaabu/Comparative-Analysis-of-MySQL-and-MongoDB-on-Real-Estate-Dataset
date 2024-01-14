@@ -1,0 +1,29 @@
+Steps to execute the project:
+
+1. Create databases in  MySQL and Mongo DB databases
+	MySQL Database name: realestate
+	Mongo Database name: realestate
+2. Create a table in MySQL using the create table query
+	
+CREATE TABLE `real_estate_table` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `SerialNumber` int(11) NOT NULL,
+  `ListYear` int(11) NOT NULL,
+  `DateRecorded` date NOT NULL,
+  `Town` varchar(50) NOT NULL,
+  `Address` varchar(300) NOT NULL,
+  `AssessedValue` int(11) NOT NULL,
+  `SaleAmount` int(11) NOT NULL,
+  `SalesRatio` float NOT NULL,
+  `PropertyType` varchar(100) NOT NULL,
+  `ResidentialType` varchar(100) NOT NULL,
+  `NonUseCode` varchar(50) NOT NULL,
+  `AssessorRemarks` varchar(100) NOT NULL,
+  `OPMremarks` varchar(150) NOT NULL,
+  `Location` varchar(150) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=997161 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+
+3. Import the dataset to both MySQL and Mongo DB databases.
+4. Execute the main.py file (Internally it will call the mongo_python_connect.py file and MySQL_Python_Connect.py file which includes all the queries used for comparison).
+5. Uncomment the print statement in mongo_python_connect.py and also in MySQL_Python_Connect.py to view the output of the queries in console.
